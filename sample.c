@@ -5,32 +5,32 @@
 
 
 
-#define  "\x1B[0m"
-#define  "\x1B[1;31m"
-#define  "\x1B[1;32m"
-#define  "\x1B[1;33m"
-#define  "\x1B[1;34m"
-#define  "\x1B[1;35m"
-#define  "\1xB[1;36m"
-#define  "\1xB[1;37m"
+#define KNPM "\x1B[0m" 
+#define KRED "\x1B[1;31m" 
+#define KGRN "\x1B[1;32m" 
+#define KYEL "\x1B[1;33m" 
+#define KBLU "\x1B[1;34m" 
+#define KMAG "\x1B[1;35m" 
+#define KCYN "\x1B[1;36m"
+#define KWHT "\x1B[1;37m"
 
 int main(int argc, char **argv){
 
     if (argc < 2){
-        printf("%sGive a filename%s\n", KYEL, KNRM);
+        printf("%sPlease provide the name of the file%s\n", KMAG, KNPM);
         return 1;
     }
 
-    if(access(argv[1], f_OK) == 1){
-        printf("%sError:%s file does not exist\n", KRED, KNRM);
+    if(access(argv[1], F_OK) == 1){
+        printf("%sError:%s file does not exist\n", KRED, KNPM);
         return 2;
     }
     
     struct stat st;
-    stat(ARGV[1],|&st);
+    stat(argv[1], &st);
 
     struct passwd *pw =getpwuid(st.st_uid);
-    printf("%sFile %s has owner %s%s\n", KRGN, ARGV[1], pw->pw_name, KNRM);
+    printf("%sThe File %s is Owned By: %s%s\n", KRED, argv[1], pw->pw_name, KNPM);
 
     return 0;
 
