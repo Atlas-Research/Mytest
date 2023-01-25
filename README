@@ -1,1 +1,18 @@
-This is a git repo
+Sample the File Owner Identifier 
+Coded in C.
+
+How to Run 
+Navigate to folder where the code is located
+
+Run:
+gcc -o sample  sample.c
+
+Then Run:
+
+./sample "file name"
+
+Example
+./sample "src"
+
+Output:
+The File src is Owned by: root
