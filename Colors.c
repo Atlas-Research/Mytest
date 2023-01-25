@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 #define KNPM "\x1B[0m" 
 #define KRED "\x1B[1;31m" 
@@ -27,7 +27,7 @@ int main()
     printf("%ssmagenta\n", KMAG);
     printf("%scyan\n", KCYN);
     printf("%swhite\n", KWHT);
-   
+    printf("%s                   %s\n", BKNRM, KNPM);
     printf("%snormal\n", BKNRM);
     printf("%sred\n", BKRED);
     printf("%sgreen\n", BKGRN);
@@ -36,7 +36,6 @@ int main()
     printf("%smagenta\n", BKMAG);
     printf("%scyan\n", BKCYN);
     printf("%swhite\n", BKWHT);
-    printf("%snormal\n", BKNRM);
     return 0;
 }
 
